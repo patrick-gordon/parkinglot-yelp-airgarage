@@ -1,0 +1,23 @@
+.homepage-container {
+  /* border: 1px solid black; */
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.homepage-content {
+  display: flex;
+  justify-content: center;
+}
+
+.homepage-input {
+  height: 2.5rem;
+  text-align: center;
+}
+
+.homepage-card-container {
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
