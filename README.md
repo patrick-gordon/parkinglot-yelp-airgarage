@@ -18,6 +18,10 @@ To run this application only three steps are needed.
 - `cd parking-lot-yelp`
 - Run `npm i` in root of project
 
+# Deployment
+My application is deployed at this address for accesability. 
+https://parking-lot-yelp-airgarage.vercel.app/
+
 # Video Time
 
 It did take me longer than expected to overcome the CORS issue that came up in my project. I have run into this issue before, but couldn't remember how to solve it. I overcame this issue by looking at many docs and old projects. When encountering the CORS issue I paused my video for about 10 minutes to step away and refresh. I often take breaks throughout my normal workflow when I run into issues, and come back with a fresh mind a few minutes later.
