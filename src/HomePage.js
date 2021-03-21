@@ -9,6 +9,8 @@ export default function HomePage() {
   const [data, setData] = useState([]);
   // initialize as empty sting for user input
   const [location, setLocation] = useState('');
+  // intialize as false
+  const [errorState, setErrorState] = useState(false)
   let token =
     'mi5qSSqdhmrNXBjLq5MBMwuqcS0q8aE4u52fwqrG8CkrBjjksgdV8ZblHdh4ThtDqQVFapfOwrCqadcTH4sJIMhQgEcWpc0bK_9ms_rJ1H-xMT1Amp4tmH_PhAg3X3Yx';
   // search function used to submit user input and make axios call
@@ -40,6 +42,7 @@ export default function HomePage() {
       })
       .catch((err) => {
         console.log(err.message);
+        setErrorState(true)
       });
   };
   // handle input change
@@ -95,6 +98,7 @@ export default function HomePage() {
       ></input>
       <Button onClick={search}>Search</Button>
     </div>
+    <h3 style={{ color: 'red' }}> Please try a different location</h3>
     <div className='homepage-card-container'>    
     {data.map((data) => {
         console.log(data)
