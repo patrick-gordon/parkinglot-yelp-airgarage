@@ -38,7 +38,7 @@ export default function HomePage() {
         let newData1 = [...newData].reverse() // spread in newdata and reverse the array
         //console.log(newData1)
         setData(newData1) // connect newly reverse array to state using the useState hook
-
+        setErrorState(false)
       })
       .catch((err) => {
         console.log(err.message);
