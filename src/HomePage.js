@@ -54,8 +54,34 @@ export default function HomePage() {
     }
   };
   
+  if (errorState === false) {
   return (
     <Container className='homepage-container' >
+    <h2>Search for Parking Lots</h2>
+    <div className='homepage-content'> 
+      <input
+        className='homepage-input'
+        type='text'
+        name='location'
+        onChange={handleChange}
+        placeholder='Where would you like to search?'
+        size='30'
+        onKeyPress={onKeyPress}
+      >
+      </input>
+      <Button onClick={search}>Search</Button>
+    </div>
+    <div className='homepage-card-container'>    
+    {data.map((data) => {
+        console.log(data)
+        return <ParkingLots key={data.id} data={data} />
+    })}
+    </div>
+    </Container>
+  );
+} else {
+  return (
+   <Container className='homepage-container' >
     <h2>Search for Parking Lots</h2>
     <div className='homepage-content'> 
       <input
@@ -76,8 +102,8 @@ export default function HomePage() {
     })}
     </div>
     </Container>
-      
   );
+}
 }
 
 // UseState
